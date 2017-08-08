@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 *, *::before, *::after {
-=======
-*, *:before, *:after {
->>>>>>> checkpoint-4-responsiveness
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
