@@ -30,6 +30,23 @@ var albumMarconi = {
     ]
 };
 
+var albumTheGreatest = {
+    title: 'Steelers',
+    artist: 'Terry Bradshaw',
+    label: 'Rooney',
+    year: '1933',
+    albumArtUrl: 'assets/images/album_covers/steelers.png',
+    songs: [
+        { title: 'Vikings', duration: '19:75' },
+        { title: 'Cowboys', duration: '19:76' },
+        { title: 'Cowboys Part Deux', duration: '19:79' },
+        { title: 'Rams', duration: '19:80'},
+        { title: 'Seahawks', duration: '20:06'}
+    ]
+};
+
+var albumList = [albumPicasso, albumMarconi, albumTheGreatest]
+
 var createSongRow = function(songNumber, songName, songLength) {
     var template =
           '<tr class="album-view-song-item">'
@@ -42,12 +59,14 @@ var createSongRow = function(songNumber, songName, songLength) {
         return template;
 };
 
+var albumImage = document.getElementsByClassName('album-cover-art')[0];
+
 var setCurrentAlbum = function(album) {
     //#1
     var albumTitle = document.getElementsByClassName('album-view-title')[0];
     var albumArtist = document.getElementsByClassName('album-view-artist')[0];
     var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
-    var albumImage = document.getElementsByClassName('album-cover-art')[0];
+
     var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
 
     //2
@@ -67,4 +86,16 @@ var setCurrentAlbum = function(album) {
 
 window.onload = function() {
     setCurrentAlbum(albumPicasso);
+//Toggle Code
+    albumImage.addEventListener("click", albumToggle);
+    var x = 1;
+    function albumToggle() {
+        if (x < albumList.length) {
+            setCurrentAlbum(albumList[x]);
+            x += 1;
+        }
+        if (x >= albumList.length) {
+            x = 0;
+        }
+    };
 };
