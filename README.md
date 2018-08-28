@@ -1,6 +1,6 @@
 ## Bloc-Jams
 
-## About
+**About**
 
 Bloc-Jams is a music player web application.  Albums can be loaded directly from your computer or you can connect to a database and listen on the go!
 
