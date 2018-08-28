@@ -14,7 +14,7 @@ Bloc-Jams is a music player web application.  Albums can be loaded directly from
 
 **Music Player**
 
-<img src="assets/images/player.png" >
+<img src="assets/images/player_bar.png" >
 
 ## Specs
 
